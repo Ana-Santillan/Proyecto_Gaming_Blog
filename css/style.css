@@ -26,3 +26,6 @@ main{
         background-position: 50% 0;
     }
 }
+button{
+    border: none;
+}

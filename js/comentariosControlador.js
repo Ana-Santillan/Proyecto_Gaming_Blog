@@ -2,6 +2,14 @@ let cajaComentario = document.getElementById(`inputTextoComentario`);
 let cajaNombre = document.getElementById(`inputTextoNombre`);
 let botonVerMas = document.getElementById(`botonVermas`);
 let botonEnviar = document.getElementById(`botonEnviar`);
+let botonAvatar = document.getElementById(`seleccionAvatar`);
+//Seleccion de Avatares
+let avatarGoku = document.getElementById(`avatarGoku`);
+let avatarDarthVader = document.getElementById(`avatarDarthVader`);
+let avatarFortnite = document.getElementById(`avatarFortnite`);
+let avatarGaspi = document.getElementById(`avatarGaspi`);
+let avatarKratos = document.getElementById(`avatarKratos`);
+let avatarPapaS = document.getElementById(`avatarPapaS`);
 
 cajaComentario.addEventListener("focus", habilitar);
 cajaComentario.addEventListener("blur", deshabilitar);
@@ -11,8 +19,58 @@ cajaNombre.addEventListener("blur", deshabilitar);
 
 botonVerMas.addEventListener("mouseover", verMascambiarColor);
 botonVerMas.addEventListener("click", verMasCambiar);
-botonEnviar.addEventListener("click",enviar);
+botonEnviar.addEventListener("click", enviar);
 
+avatarGoku.addEventListener("click", function () {
+    seleccionAvatar(1);
+});
+avatarDarthVader.addEventListener("click", function () {
+    seleccionAvatar(2);
+});
+avatarFortnite.addEventListener("click", function () {
+    seleccionAvatar(3);
+});
+avatarKratos.addEventListener("click", function () {
+    seleccionAvatar(4);
+});
+avatarPapaS.addEventListener("click", function () {
+    seleccionAvatar(5);
+});
+avatarGaspi.addEventListener("click", function () {
+    seleccionAvatar(6);
+});
+
+function seleccionAvatar(n) {
+    switch (n) {
+        case 1:
+            let avatarGoku = document.getElementById(`avatarGoku`);
+            let src = avatarGoku.getAttribute("src");
+            let botonAvatar = document.getElementById(`seleccionAvatar`);
+            botonAvatar.addEventListener("click", function () {
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            });
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+
+            break;
+        case 6:
+
+            break;
+    }
+    let botonAvatar = document.getElementById(`seleccionAvatar`);
+
+
+}
 function habilitar() {
     let botonEnviar = document.getElementById(`botonEnviar`);
     let botonCancelar = document.getElementById(`botonCancelar`);
@@ -31,8 +89,8 @@ function habilitar() {
         let inputNombre = document.getElementById(`inputTextoNombre`);
         inputComentario.value = "";
         inputNombre.value = "";
-        input.blur();        
-});
+        input.blur();
+    });
 }
 
 function deshabilitar() {
@@ -72,10 +130,20 @@ function verMasCambiar() {
     }
 }
 
-function enviar(){
-    let inputNombre = document.getElementById(`inputTextoComentario`);
-    let inputTexto = document.getElementById(`inputTextoNombre`);
-    let inputFoto = document.getElementById(``);
+function enviar() {
+    let inputNombre = document.getElementById(`inputTextoNombre`);
+    let inputComentario = document.getElementById(`inputTextoComentario`);
+    let inputAvatar = document.getElementById(`avatarSeleccionado`);
+    let srcAvatar = inputAvatar.getAttribute("src");
 
-    
+    let ponerNombre = document.getElementById(`nombreComentarioNuevo`);
+    let ponerComentario = document.getElementById(`comentarioNuevo`);
+    let ponerAvatar = document.getElementById(`avatarPublicado`);
+
+    ponerAvatar.setAttribute("src", srcAvatar);
+    ponerNombre.innerText = inputNombre.value;
+    ponerComentario.innerText = inputComentario.value;
+    ponerFoto.style.display = "block"
+    inputComentario.value = "";
+    inputNombre.value = "";
 }
