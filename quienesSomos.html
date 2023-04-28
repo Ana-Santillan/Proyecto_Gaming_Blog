@@ -289,26 +289,32 @@
                 <hr class="border border-primary border-1 opacity-75 mt-5" />
             </div>
         </section>
-        <section id="comentarios" class="bg-transparent">
+        <section id="comentarios" class="bg-transparent list-group-item">
             <div id="Cajacomentario" class="container">
-                <div class="container my-3">
-                    <h3 class="display-3 mb-3">Comentarios</h3>
-                    <input id="inputTexto" type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="Escribe algo...">
-                    <div class="d-flex justify-content-end">
-                        <button id="botonCancelar" class="d-none">Cancelar</button>
-                        <button id="botonEnviar" class="btn btn-secondary mt-1">Enviar</button>
-                    </div>
+                <h3 class="display-3 mb-3">Comentarios</h3>
+                <div class="container my-1 d-flex">
+                    <img id="imagenRepresentativa" height="65px" width="70px" src="./img/man-157699_1280.webp"
+                    class="border rounded-circle mt-2 mx-1" alt="">                    
+                    <div class="container-fluid">
+                        <input id="inputTextoNombre" type="text" class="form-control mb-1 inputTexto" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Escribe un nombre..." style="width: 180px;">
+                        <input id="inputTextoComentario" type="text" class="form-control inputTexto" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Escribe un comentario...">
+                    </div>                    
+                </div>
+                <div class="d-flex justify-content-end me-3">
+                    <button id="botonCancelar" class="d-none">Cancelar</button>
+                    <button id="botonEnviar" class="btn btn-secondary">Enviar</button>
                 </div>
             </div>
-            <div class="container text-center">
+            <article class="container text-center">
                 <p>
                     <button id="botonVermas" class="btn btn-light" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
                         Ver Comentarios
                     </button>
                 </p>
-            </div>
+            </article>
             <div style="min-height: 120px;">
                 <div class="collapse" id="collapseWidthExample">
                     <div id="comentariosPublicados">

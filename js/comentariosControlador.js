@@ -1,10 +1,17 @@
-let cajaComentario = document.getElementById(`inputTexto`);
+let cajaComentario = document.getElementById(`inputTextoComentario`);
+let cajaNombre = document.getElementById(`inputTextoNombre`);
 let botonVerMas = document.getElementById(`botonVermas`);
+let botonEnviar = document.getElementById(`botonEnviar`);
 
 cajaComentario.addEventListener("focus", habilitar);
 cajaComentario.addEventListener("blur", deshabilitar);
+
+cajaNombre.addEventListener("focus", habilitar);
+cajaNombre.addEventListener("blur", deshabilitar);
+
 botonVerMas.addEventListener("mouseover", verMascambiarColor);
 botonVerMas.addEventListener("click", verMasCambiar);
+botonEnviar.addEventListener("click",enviar);
 
 function habilitar() {
     let botonEnviar = document.getElementById(`botonEnviar`);
@@ -20,11 +27,16 @@ function habilitar() {
         botonCancelar.className = "btn bg-transparent mt-1";
     });
     botonCancelar.addEventListener("click", function () {
-        document.getElementById(`inputTexto`).value = "";
-    });
+        let inputComentario = document.getElementById(`inputTextoComentario`);
+        let inputNombre = document.getElementById(`inputTextoNombre`);
+        inputComentario.value = "";
+        inputNombre.value = "";
+        input.blur();        
+});
 }
 
 function deshabilitar() {
+    console.log('ocultando');
     document.getElementById(`botonEnviar`).className = "btn btn-secondary mt-1";
     document.getElementById(`botonCancelar`).className = "d-none"
 }
@@ -60,3 +72,10 @@ function verMasCambiar() {
     }
 }
 
+function enviar(){
+    let inputNombre = document.getElementById(`inputTextoComentario`);
+    let inputTexto = document.getElementById(`inputTextoNombre`);
+    let inputFoto = document.getElementById(``);
+
+    
+}
