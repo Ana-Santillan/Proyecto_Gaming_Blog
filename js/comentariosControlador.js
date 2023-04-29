@@ -134,13 +134,25 @@ function seleccionAvatar(n) {
     }
 }
 
+function validarCaracteres(cadena,min,max){
+    if(cadena.length >=min && cadena.length <= max){
+        console.log(`valida`);
+        return true;
+    }else{
+        return false;
+    }
+}
 function habilitar() {
     let botonEnviar = document.getElementById(`botonEnviar`);
     let botonCancelar = document.getElementById(`botonCancelar`);
-    
-    botonEnviar.className = "btn btn-primary mt-1";
-    botonCancelar.className = "btn bg-transparent mt-1";
-
+    if(validarCaracteres(document.getElementById(`inputTextoNombre`).value,4,12) && validarCaracteres(document.getElementById(`inputTextoComentario`).value,4,12)){
+            console.log(`paso`);
+            botonEnviar.disabled = false;
+            botonEnviar.className = "btn btn-primary mt-1";
+            botonCancelar.className = "btn bg-transparent mt-1";
+        }else{
+            botonEnviar.disabled = true;
+        }
     botonCancelar.addEventListener("mouseover", function () {
         botonCancelar.className = "btn bg-danger mt-1";
     });
@@ -192,19 +204,22 @@ function verMasCambiar() {
     }
 }
 function enviar(){
+    //Defindo las entradas por el usuario
     let inputNombre = document.getElementById(`inputTextoNombre`);
     let inputComentario = document.getElementById(`inputTextoComentario`);
     let contenedorPadre = document.getElementById(`comentariosPublicados`);
     let avatarImagen = document.getElementById(`imagenRepresentativa`);
-    let src = avatarImagen.getAttribute("src");
-    var botonesAvatar = document.querySelectorAll('button');
-      botonesAvatar.classList.remove(' bg-primary');
     
-    // crea una nueva instancia del contenedor de comentarios y su contenido
+    //Busco la ruta de la imagen seleccionada por el usuario
+    let src = avatarImagen.getAttribute("src");
+    
+    limpiarSeleccion();
+    
+    //Creo el contenedor e introduzco todo adentro
     let nuevoComentario = document.createElement("div");
     nuevoComentario.classList.add("container", "d-flex");
 
-
+    //Creo el img
     let nuevoAvatar = document.createElement("img");
     nuevoAvatar.id = "avatarPublicado";
     nuevoAvatar.style.height = "65px";
@@ -212,25 +227,29 @@ function enviar(){
     nuevoAvatar.setAttribute("src",src);
     nuevoAvatar.className="border rounded-circle mt-2 mx-3";
 
+    //Creo Div para la parted de comentario y nombre
     let nuevoContenido = document.createElement("div");
     let nuevoNombre = document.createElement("strong");
     let nuevoComentarioTexto = document.createElement("p");
     
+    //Asigno Ids
     nuevoNombre.id = "nombreComentarioNuevo";
     nuevoComentarioTexto.id = "comentarioNuevo";
 
+    //Introduzco texto ingresado por el usuario
     nuevoNombre.innerText = inputNombre.value;
-
     nuevoComentarioTexto.innerText = inputComentario.value;
 
+    //Introduzco elementos dentro del contenedor 
     nuevoContenido.appendChild(nuevoNombre);
     nuevoContenido.appendChild(nuevoComentarioTexto);
-
     nuevoComentario.appendChild(nuevoAvatar);
     nuevoComentario.appendChild(nuevoContenido);
+
+    //Introduzco el contenedor al contenedor padre de todos los comentarios publicados
     contenedorPadre.insertBefore(nuevoComentario, contenedorPadre.firstChild);
 
-    // limpia los campos de entrada
+    //Limpia los campos de entrada
     inputNombre.value = "";
     inputComentario.value = "";
 }

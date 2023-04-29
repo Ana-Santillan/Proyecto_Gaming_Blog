@@ -294,7 +294,8 @@
                 <h3 class="display-3 mb-3">Comentarios</h3>
                 <div class="container my-1 d-flex">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn rounded-circle" data-bs-toggle="modal" data-bs-target="#modalVentana">
+                    <button type="button" class="btn rounded-circle" data-bs-toggle="modal"
+                        data-bs-target="#modalVentana">
                         <img id="imagenRepresentativa" height="85px" width="85px"
                             src="./img/db64938b-1f65-4905-8cca-0a416021a10c.jpg" class=" rounded-circle mt-2 mx-1"
                             alt=""> </button>
@@ -308,18 +309,36 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body text-center">
-                                    <button id="botonGoku" type="button" class="btn rounded-circle"><img id="avatarGoku" src="./img/Son Goku_2 - copia.png" alt=""class=" rounded-circle mt-2 mx-1" height="65px" width="70px"></button>
-                                    <button id="botonFortnite" type="button" class="btn rounded-circle"><img id="avatarFortnite" src="./img/descarga.jpg" alt="" class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"width="70px"></button>
-                                    <button id="botonKratos" type="button" class="btn rounded-circle"><img id="avatarKratos" src="./img/descarga (1).jpg" alt="" class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"width="70px"></button>
-                                    <button id="botonGaspi" type="button" class="btn rounded-circle"><img id="avatarGaspi" src="./img/descarga (2).jpg" alt="" class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"width="70px"></button>
-                                    <button id="botonDarthVader" type="button" class="btn rounded-circle"><img id="avatarDarthVader" src="./img/1072434_110615-cc-Darth-Vader-Thumb.jpg" alt=""class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px"width="70px"></button>
-                                    <button id="botonPapaS" type="button" class="btn rounded-circle"><img id="avatarPapaS" src="./img/FsxosMIWcAMJBtY.jpg" alt=""class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px"width="70px"></button>
+                                <div id="avataresImg" class="modal-body text-center">
+                                    <button id="botonGoku" type="button" class="btn rounded-circle"><img id="avatarGoku"
+                                            src="./img/Son Goku_2 - copia.png" alt="" class=" rounded-circle mt-2 mx-1"
+                                            height="65px" width="70px"></button>
+                                    <button id="botonFortnite" type="button" class="btn rounded-circle"><img
+                                            id="avatarFortnite" src="./img/descarga.jpg" alt=""
+                                            class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
+                                            width="70px"></button>
+                                    <button id="botonKratos" type="button" class="btn rounded-circle"><img
+                                            id="avatarKratos" src="./img/descarga (1).jpg" alt=""
+                                            class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
+                                            width="70px"></button>
+                                    <button id="botonGaspi" type="button" class="btn rounded-circle"><img
+                                            id="avatarGaspi" src="./img/descarga (2).jpg" alt=""
+                                            class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
+                                            width="70px"></button>
+                                    <button id="botonDarthVader" type="button" class="btn rounded-circle"><img
+                                            id="avatarDarthVader" src="./img/1072434_110615-cc-Darth-Vader-Thumb.jpg"
+                                            alt="" class="border rounded-circle mt-2 mx-1 object-fit-cover"
+                                            height="65px" width="70px"></button>
+                                    <button id="botonPapaS" type="button" class="btn rounded-circle"><img
+                                            id="avatarPapaS" src="./img/FsxosMIWcAMJBtY.jpg" alt=""
+                                            class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px"
+                                            width="70px"></button>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal" onclick="limpiarSeleccion()">Cancelar</button>
-                                    <button id="seleccionAvatar" type="button" class="btn btn-primary" data-bs-dismiss="modal">Seleccionar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                        onclick="limpiarSeleccion()">Cancelar</button>
+                                    <button id="seleccionAvatar" type="submit" class="btn btn-primary"
+                                        data-bs-dismiss="modal">Seleccionar</button>
                                 </div>
                             </div>
                         </div>
@@ -328,10 +347,20 @@
                         <input id="inputTextoNombre" type="text" class="form-control mb-1 inputTexto"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                             placeholder="Escribe un nombre..." style="width: 180px;">
+                        <div id="inputGroup-sizing-default" class="invalid-feedback">
+                            Porfavor ingrese un nombre valido
+                        </div>
+
                         <input id="inputTextoComentario" type="text" class="form-control inputTexto"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                             placeholder="Escribe un comentario...">
+                        <div id="inputGroup-sizing-default" class="invalid-feedback">
+                            Porfavor ingrese un comentario valido
+                        </div>
                     </div>
+
+
+                    
                 </div>
                 <div class="d-flex justify-content-end me-3">
                     <button id="botonCancelar" class="d-none">Cancelar</button>
