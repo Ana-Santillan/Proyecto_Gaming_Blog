@@ -43,34 +43,80 @@ avatarGaspi.addEventListener("click", function () {
 function seleccionAvatar(n) {
     switch (n) {
         case 1:
-            let avatarGoku = document.getElementById(`avatarGoku`);
-            let src = avatarGoku.getAttribute("src");
-            let botonAvatar = document.getElementById(`seleccionAvatar`);
+            let botonGoku = document.getElementById(`botonGoku`);
+            botonGoku.addEventListener("click",function(){
+            document.getElementById(`botonGoku`).className +=" bg-primary";
+            });
             botonAvatar.addEventListener("click", function () {
+                let avatarGoku = document.getElementById(`avatarGoku`);
+                let src = avatarGoku.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
-            });
+            })
             break;
         case 2:
-
+            let botonVader = document.getElementById(`botonDarthVader`);
+            botonVader.addEventListener("click",function(){
+            document.getElementById(`botonDarthVader`).className +=" bg-primary";
+            });
+            botonAvatar.addEventListener("click", function () {
+                let avatarDarthVader = document.getElementById(`avatarDarthVader`);
+                let src = avatarDarthVader.getAttribute("src");
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            })
             break;
         case 3:
-
+            let botonFortnite = document.getElementById(`botonFortnite`);
+            botonFortnite.addEventListener("click",function(){
+            document.getElementById(`botonFortnite`).className +=" bg-primary";
+            });
+            botonAvatar.addEventListener("click", function () {
+                let avatarFortnite = document.getElementById(`avatarFortnite`);
+                let src = avatarFortnite.getAttribute("src");
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            })
             break;
         case 4:
-
+            let botonKratos = document.getElementById(`botonKratos`);
+            botonKratos.addEventListener("click",function(){
+            document.getElementById(`botonKratos`).className +=" bg-primary";
+            });
+            botonAvatar.addEventListener("click", function () {
+                let avatarKratos = document.getElementById(`avatarKratos`);
+                let src = avatarKratos.getAttribute("src");
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            })
             break;
         case 5:
-
+            let botonPapaS = document.getElementById(`botonPapaS`);
+            botonPapaS.addEventListener("click",function(){
+            document.getElementById(`botonPapaS`).className +=" bg-primary";
+            });
+            botonAvatar.addEventListener("click", function () {
+                let avatarPapaS = document.getElementById(`avatarPapaS`);
+                let src = avatarPapaS.getAttribute("src");
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            })
             break;
         case 6:
-
+            let botonGaspi = document.getElementById(`botonGaspi`);
+            botonGaspi.addEventListener("click",function(){
+            document.getElementById(`botonGaspi`).className +=" bg-primary";
+            });
+            botonAvatar.addEventListener("click", function () {
+                let avatarGaspi = document.getElementById(`avatarGaspi`);
+                let src = avatarGaspi.getAttribute("src");
+                let avatarNuevo = document.getElementById(`imagenRepresentativa`);
+                avatarNuevo.setAttribute("src", src);
+            })
             break;
     }
-    let botonAvatar = document.getElementById(`seleccionAvatar`);
-
-
 }
+
 function habilitar() {
     let botonEnviar = document.getElementById(`botonEnviar`);
     let botonCancelar = document.getElementById(`botonCancelar`);
