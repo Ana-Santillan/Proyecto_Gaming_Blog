@@ -52,6 +52,7 @@ function seleccionAvatar(n) {
                 let src = avatarGoku.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonGoku`).className= "btn rounded-circle";
             })
             break;
         case 2:
@@ -64,6 +65,7 @@ function seleccionAvatar(n) {
                 let src = avatarDarthVader.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonDarthVader`).className= "btn rounded-circle";
             })
             break;
         case 3:
@@ -76,6 +78,7 @@ function seleccionAvatar(n) {
                 let src = avatarFortnite.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonFortnite`).className= "btn rounded-circle";
             })
             break;
         case 4:
@@ -88,6 +91,7 @@ function seleccionAvatar(n) {
                 let src = avatarKratos.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonKratos`).className= "btn rounded-circle";
             })
             break;
         case 5:
@@ -100,6 +104,7 @@ function seleccionAvatar(n) {
                 let src = avatarPapaS.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonPapaS`).className= "btn rounded-circle";
             })
             break;
         case 6:
@@ -112,6 +117,7 @@ function seleccionAvatar(n) {
                 let src = avatarGaspi.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
+                document.getElementById(`botonGaspi`).className= "btn rounded-circle";
             })
             break;
     }
@@ -120,7 +126,7 @@ function seleccionAvatar(n) {
 function habilitar() {
     let botonEnviar = document.getElementById(`botonEnviar`);
     let botonCancelar = document.getElementById(`botonCancelar`);
-
+    
     botonEnviar.className = "btn btn-primary mt-1";
     botonCancelar.className = "btn bg-transparent mt-1";
 
@@ -140,7 +146,6 @@ function habilitar() {
 }
 
 function deshabilitar() {
-    console.log('ocultando');
     document.getElementById(`botonEnviar`).className = "btn btn-secondary mt-1";
     document.getElementById(`botonCancelar`).className = "d-none"
 }
@@ -181,7 +186,9 @@ function enviar(){
     let contenedorPadre = document.getElementById(`comentariosPublicados`);
     let avatarImagen = document.getElementById(`imagenRepresentativa`);
     let src = avatarImagen.getAttribute("src");
-
+    var botonesAvatar = document.querySelectorAll('button');
+      botonesAvatar.classList.remove(' bg-primary');
+    
     // crea una nueva instancia del contenedor de comentarios y su contenido
     let nuevoComentario = document.createElement("div");
     nuevoComentario.classList.add("container", "d-flex");
@@ -215,40 +222,4 @@ function enviar(){
     // limpia los campos de entrada
     inputNombre.value = "";
     inputComentario.value = "";
-    console.log(nuevoAvatar)
 }
-/*
-function enviar(){
-    let inputNombre = document.getElementById(`inputTextoNombre`);
-    let inputComentario = document.getElementById(`inputTextoComentario`);
-    let contenedorPadre = document.getElementById(`comentariosPublicados`);
-    let contenedor = document.getElementById(`comentarioPublicado`);
-    let avatarImagen = document.getElementById(`imagenRepresentativa`);
-    let src = avatarImagen.getAttribute("src");
-    let contenedorDeComentarios= document.getElementById(`contenidoComentario`);
-
-    let cloneContenedorDeComentarios = contenedorDeComentarios.cloneNode(true);
-    let cloneContenedor = contenedor.cloneNode(true);
-    contenedorPadre.insertBefore(cloneContenedor,contenedorPadre.firstChild);
-    let ponerNombre = document.getElementById(`nombreComentarioNuevo`);
-    let ponerComentario = document.getElementById(`comentarioNuevo`);
-    let ponerAvatarImagen = document.getElementById(`avatarPublicado`);
-    let clonPonerAvatarImagen = ponerAvatarImagen.cloneNode(true);
-    let clonPonerNombre = ponerNombre.cloneNode(true);
-    let clonPonerComentario = ponerComentario.cloneNode(true);
-    
-    cloneContenedorDeComentarios.insertBefore(clonPonerComentario,cloneContenedorDeComentarios.firstChild);
-    cloneContenedorDeComentarios.insertBefore(clonPonerNombre,cloneContenedorDeComentarios.firstChild);
-    cloneContenedor.insertBefore(cloneContenedorDeComentarios,cloneContenedor.firstChild);
-    cloneContenedor.insertBefore(clonPonerAvatarImagen,cloneContenedor.firstChild);
-    
-    clonPonerNombre.innerText = inputNombre.value;
-    clonPonerComentario.innerText = inputComentario.value;
-    clonPonerAvatarImagen.setAttribute("src",src);
-    clonPonerAvatarImagen.style.display="block";
-    inputComentario.value = "";
-    inputNombre.value = "";
-    console.log(clonPonerNombre);
-    console.log(clonPonerComentario);
-    console.log(clonPonerAvatarImagen);
-}*/
