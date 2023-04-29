@@ -175,7 +175,49 @@ function verMasCambiar() {
         botonVerMas.className = "btn btn-primary";
     }
 }
+function enviar(){
+    let inputNombre = document.getElementById(`inputTextoNombre`);
+    let inputComentario = document.getElementById(`inputTextoComentario`);
+    let contenedorPadre = document.getElementById(`comentariosPublicados`);
+    let avatarImagen = document.getElementById(`imagenRepresentativa`);
+    let src = avatarImagen.getAttribute("src");
 
+    // crea una nueva instancia del contenedor de comentarios y su contenido
+    let nuevoComentario = document.createElement("div");
+    nuevoComentario.classList.add("container", "d-flex");
+
+
+    let nuevoAvatar = document.createElement("img");
+    nuevoAvatar.id = "avatarPublicado";
+    nuevoAvatar.style.height = "65px";
+    nuevoAvatar.style.width = "70px";
+    nuevoAvatar.setAttribute("src",src);
+    nuevoAvatar.className="border rounded-circle mt-2 mx-3";
+
+    let nuevoContenido = document.createElement("div");
+    let nuevoNombre = document.createElement("strong");
+    let nuevoComentarioTexto = document.createElement("p");
+    
+    nuevoNombre.id = "nombreComentarioNuevo";
+    nuevoComentarioTexto.id = "comentarioNuevo";
+
+    nuevoNombre.innerText = inputNombre.value;
+
+    nuevoComentarioTexto.innerText = inputComentario.value;
+
+    nuevoContenido.appendChild(nuevoNombre);
+    nuevoContenido.appendChild(nuevoComentarioTexto);
+
+    nuevoComentario.appendChild(nuevoAvatar);
+    nuevoComentario.appendChild(nuevoContenido);
+    contenedorPadre.insertBefore(nuevoComentario, contenedorPadre.firstChild);
+
+    // limpia los campos de entrada
+    inputNombre.value = "";
+    inputComentario.value = "";
+    console.log(nuevoAvatar)
+}
+/*
 function enviar(){
     let inputNombre = document.getElementById(`inputTextoNombre`);
     let inputComentario = document.getElementById(`inputTextoComentario`);
@@ -209,4 +251,4 @@ function enviar(){
     console.log(clonPonerNombre);
     console.log(clonPonerComentario);
     console.log(clonPonerAvatarImagen);
-}
+}*/
