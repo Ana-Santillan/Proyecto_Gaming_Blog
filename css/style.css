@@ -15,6 +15,10 @@ main{
     /* background: #AE02C4; */
     color: aliceblue;
 }
+.colorBoton:hover{
+    background: rgb(94, 0, 128);
+    color: aliceblue;
+}
 @keyframes animado{
     0%{
         background-position: 0 50%;
@@ -25,4 +29,8 @@ main{
     100%{
         background-position: 50% 0;
     }
+}
+
+.colorError{
+    background: #1f0828;
 }
