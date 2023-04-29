@@ -39,13 +39,19 @@ avatarPapaS.addEventListener("click", function () {
 avatarGaspi.addEventListener("click", function () {
     seleccionAvatar(6);
 });
-
+function limpiarSeleccion(){
+    var elementos = document.getElementsByClassName('btn rounded-circle bg-primary');
+    for(var i = 0; i < elementos.length; i++){
+        elementos[i].classList.remove('bg-primary');
+        }
+}
 function seleccionAvatar(n) {
     switch (n) {
         case 1:
             let botonGoku = document.getElementById(`botonGoku`);
             botonGoku.addEventListener("click",function(){
-            document.getElementById(`botonGoku`).className +=" bg-primary";
+                limpiarSeleccion();
+                document.getElementById(`botonGoku`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
                 let avatarGoku = document.getElementById(`avatarGoku`);
@@ -56,13 +62,14 @@ function seleccionAvatar(n) {
             })
             break;
         case 2:
-            let botonVader = document.getElementById(`botonDarthVader`);
-            botonVader.addEventListener("click",function(){
-            document.getElementById(`botonDarthVader`).className +=" bg-primary";
+            let botonDarthVader = document.getElementById(`botonDarthVader`);
+            botonDarthVader.addEventListener("click",function(){
+                limpiarSeleccion();           
+                document.getElementById(`botonDarthVader`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
-                let avatarDarthVader = document.getElementById(`avatarDarthVader`);
-                let src = avatarDarthVader.getAttribute("src");
+                let avatarGoku = document.getElementById(`avatarGoku`);
+                let src = avatarGoku.getAttribute("src");
                 let avatarNuevo = document.getElementById(`imagenRepresentativa`);
                 avatarNuevo.setAttribute("src", src);
                 document.getElementById(`botonDarthVader`).className= "btn rounded-circle";
@@ -71,6 +78,7 @@ function seleccionAvatar(n) {
         case 3:
             let botonFortnite = document.getElementById(`botonFortnite`);
             botonFortnite.addEventListener("click",function(){
+            limpiarSeleccion();
             document.getElementById(`botonFortnite`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
@@ -84,7 +92,8 @@ function seleccionAvatar(n) {
         case 4:
             let botonKratos = document.getElementById(`botonKratos`);
             botonKratos.addEventListener("click",function(){
-            document.getElementById(`botonKratos`).className +=" bg-primary";
+                limpiarSeleccion();
+                document.getElementById(`botonKratos`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
                 let avatarKratos = document.getElementById(`avatarKratos`);
@@ -97,7 +106,8 @@ function seleccionAvatar(n) {
         case 5:
             let botonPapaS = document.getElementById(`botonPapaS`);
             botonPapaS.addEventListener("click",function(){
-            document.getElementById(`botonPapaS`).className +=" bg-primary";
+                limpiarSeleccion();
+                document.getElementById(`botonPapaS`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
                 let avatarPapaS = document.getElementById(`avatarPapaS`);
@@ -110,7 +120,8 @@ function seleccionAvatar(n) {
         case 6:
             let botonGaspi = document.getElementById(`botonGaspi`);
             botonGaspi.addEventListener("click",function(){
-            document.getElementById(`botonGaspi`).className +=" bg-primary";
+                limpiarSeleccion();
+                document.getElementById(`botonGaspi`).className +=" bg-primary";
             });
             botonAvatar.addEventListener("click", function () {
                 let avatarGaspi = document.getElementById(`avatarGaspi`);
