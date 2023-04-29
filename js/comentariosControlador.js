@@ -176,20 +176,37 @@ function verMasCambiar() {
     }
 }
 
-function enviar() {
+function enviar(){
     let inputNombre = document.getElementById(`inputTextoNombre`);
     let inputComentario = document.getElementById(`inputTextoComentario`);
-    let inputAvatar = document.getElementById(`avatarSeleccionado`);
-    let srcAvatar = inputAvatar.getAttribute("src");
+    let contenedorPadre = document.getElementById(`comentariosPublicados`);
+    let contenedor = document.getElementById(`comentarioPublicado`);
+    let avatarImagen = document.getElementById(`imagenRepresentativa`);
+    let src = avatarImagen.getAttribute("src");
+    let contenedorDeComentarios= document.getElementById(`contenidoComentario`);
 
+    let cloneContenedorDeComentarios = contenedorDeComentarios.cloneNode(true);
+    let cloneContenedor = contenedor.cloneNode(true);
+    contenedorPadre.insertBefore(cloneContenedor,contenedorPadre.firstChild);
     let ponerNombre = document.getElementById(`nombreComentarioNuevo`);
     let ponerComentario = document.getElementById(`comentarioNuevo`);
-    let ponerAvatar = document.getElementById(`avatarPublicado`);
-
-    ponerAvatar.setAttribute("src", srcAvatar);
-    ponerNombre.innerText = inputNombre.value;
-    ponerComentario.innerText = inputComentario.value;
-    ponerFoto.style.display = "block"
+    let ponerAvatarImagen = document.getElementById(`avatarPublicado`);
+    let clonPonerAvatarImagen = ponerAvatarImagen.cloneNode(true);
+    let clonPonerNombre = ponerNombre.cloneNode(true);
+    let clonPonerComentario = ponerComentario.cloneNode(true);
+    
+    cloneContenedorDeComentarios.insertBefore(clonPonerComentario,cloneContenedorDeComentarios.firstChild);
+    cloneContenedorDeComentarios.insertBefore(clonPonerNombre,cloneContenedorDeComentarios.firstChild);
+    cloneContenedor.insertBefore(cloneContenedorDeComentarios,cloneContenedor.firstChild);
+    cloneContenedor.insertBefore(clonPonerAvatarImagen,cloneContenedor.firstChild);
+    
+    clonPonerNombre.innerText = inputNombre.value;
+    clonPonerComentario.innerText = inputComentario.value;
+    clonPonerAvatarImagen.setAttribute("src",src);
+    clonPonerAvatarImagen.style.display="block";
     inputComentario.value = "";
     inputNombre.value = "";
+    console.log(clonPonerNombre);
+    console.log(clonPonerComentario);
+    console.log(clonPonerAvatarImagen);
 }
