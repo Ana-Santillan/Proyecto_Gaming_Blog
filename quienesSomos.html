@@ -292,7 +292,8 @@
         <section id="comentarios" class="bg-transparent list-group-item">
             <div id="Cajacomentario" class="container">
                 <h3 class="display-3 mb-3">Comentarios</h3>
-                <div class="container my-1 d-flex">
+                <div class="container my-1 d-flex flex-column justify-content-center align-items-center d-lg-flex flex-lg-row">
+
                     <!-- Button trigger modal -->
                     <button type="button" class="btn rounded-circle" data-bs-toggle="modal"
                         data-bs-target="#modalVentana">
@@ -347,22 +348,12 @@
                         <input id="inputTextoNombre" type="text" class="form-control mb-1 inputTexto"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                             placeholder="Escribe un nombre..." style="width: 180px;">
-                        <div id="inputGroup-sizing-default" class="invalid-feedback">
-                            Porfavor ingrese un nombre valido
-                        </div>
-
                         <input id="inputTextoComentario" type="text" class="form-control inputTexto"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                             placeholder="Escribe un comentario...">
-                        <div id="inputGroup-sizing-default" class="invalid-feedback">
-                            Porfavor ingrese un comentario valido
-                        </div>
                     </div>
-
-
-                    
                 </div>
-                <div class="d-flex justify-content-end me-3">
+                <div class="d-flex justify-content-center my-2 d-lg-flex justify-content-lg-end  me-lg-3">
                     <button id="botonCancelar" class="d-none">Cancelar</button>
                     <button id="botonEnviar" class="btn btn-secondary">Enviar</button>
                 </div>
