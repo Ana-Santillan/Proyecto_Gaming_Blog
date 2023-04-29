@@ -16,7 +16,10 @@ main{
     /* background: #AE02C4; */
     color: aliceblue;
 }
-@keyframes animado{
+.pintarBordeContenedor{
+    border:1px solid black ;
+}
+/* @keyframes animado{
     0%{
         background-position: 0 50%;
     }
@@ -26,4 +29,4 @@ main{
     100%{
         background-position: 50% 0;
     }
-}
+} */
