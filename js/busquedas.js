@@ -21,20 +21,30 @@ function buscarArticulo() {
   console.log(textoBuscado);
   console.log(articulos);
   let articuloEncontrado;
+  
+  //hacer desaparecer el resto de los articulos  cuando enuentre una coincidencia se eliminan los demas articulos y 
+
   for (let i = 0; i < articulos.length; i++) {
     let articuloRecorrido = articulos[i].innerHTML.includes(textoBuscado);
     if (articuloRecorrido === true) {
       articuloEncontrado = articulos[i];
       console.log(articuloEncontrado);
-
-      articulo[i].classList();
+      articuloEncontrado.style.display = "block";
+    } else {
+      articulos[i].style.display = "none";
     }
-
   } 
   if (!articuloEncontrado){
     console.log('No se encontro coincidencia');
+    resultadosDeBusqueda.innerHTML = "No se encontraron resultados";
+  } else {
+    resultadosDeBusqueda.innerHTML = "";
   }
-
-
-}
+  if (!articuloEncontrado){
+    console.log('No se encontro coincidencia');
+  }
  
+}
+// function ocultarElementos(){
+//   document.getElementById('articulo')
+// }
