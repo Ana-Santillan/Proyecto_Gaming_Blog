@@ -26,3 +26,97 @@ main{
         background-position: 50% 0;
     }
 }
+
+.colorNoticia{
+    background: #7f3595;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 20px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: rgb(209, 209, 209);
+    margin: 0px 100px;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(81, 94, 179, 0.693);
+    border-radius: 10px;
+}
+
+.contenedor {
+    width: 100%;
+    height: 500px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 30px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.contenedor-imagen {
+    width: auto;
+    height: auto;
+    transition: transform .3s;
+}
+
+.imagen {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s;
+    filter: saturate(40%);
+}
+
+.imagen:hover {
+    filter: saturate(100%);
+    transition: 350ms;
+    width: 350px;
+    height: 550px;
+}
+
+    @media all and (max-width:767px) {
+        .imagenCarrusel{
+            width: 100%;
+            height: 100%;
+        }
+        .imagen {
+            width: 180px;
+            height: 320px;
+            object-position: center;
+            transition: .3s;
+        }
+        .imagen:hover {
+            filter: saturate(100%);
+            transition: 350ms;
+            width: 220px;
+            height: 350px;
+        }
+    }
+    
+    @media all and (min-width:768px) and (max-width:991px) {
+        .imagenCarrusel{
+            width: 100%;
+            height: 100%;
+        }
+        .imagen {
+            width: 250px;
+            height: 445px;
+            object-position: center;
+            transition: .3s;
+        }
+        .imagen:hover {
+            filter: saturate(100%);
+            transition: 300ms;
+            width: 290px;
+            height: 485px;
+        }
+    }
