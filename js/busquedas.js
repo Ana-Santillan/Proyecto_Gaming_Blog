@@ -1,27 +1,40 @@
-let formularioBusqueda = document.querySelector('formularioBusqueda')
+let campoDeBusqueda = document.getElementById("campoDeBusqueda");
+let resultadosDeBusqueda = document.getElementById("resultadosDeBusqueda");
+// const cardArticulo = document.querySelectorAll('')
+//busqueda form traigo
+let formularioBusqueda = document.getElementById("formularioBusqueda");
+//tomar el evento
+formularioBusqueda.addEventListener("submit", (e) => {
+  e.preventDefault();
+  buscarArticulo();
+});
+// detengo que la pag se recargue  e. prevent d
 
-let input = document.querySelector('buscador')
-console.log(typeof buscador)
-console.log(buscador.value);
+//traigo el texto que ingreso el usuario
+function buscarArticulo() {
+  let textoBuscado = campoDeBusqueda.value.trim();
+  textoBuscado = textoBuscado.toLowerCase();
+  let articulos = document.getElementsByClassName("articulo");
 
-//manejador
-formularioBusqueda.addEventListener('submit',obtenerDatos);
+  //  etiqueta p articulo
+  console.log("Buscando Articulo");
+  console.log(textoBuscado);
+  console.log(articulos);
+  let articuloEncontrado;
+  for (let i = 0; i < articulos.length; i++) {
+    let articuloRecorrido = articulos[i].innerHTML.includes(textoBuscado);
+    if (articuloRecorrido === true) {
+      articuloEncontrado = articulos[i];
+      console.log(articuloEncontrado);
+
+      articulo[i].classList();
+    }
+
+  } 
+  if (!articuloEncontrado){
+    console.log('No se encontro coincidencia');
+  }
 
 
-function obtenerDatos(e){
-    e.preventDefault();
-console.log('evento submit del formulari');
-
-
-//resetear los datos de un formulario 
-formularioBusqueda.reset();
 }
-//paso a minuscula 
-
-let buscador = document.getElementById("buscador").value.toLowerCase(); 
-buscarArticulo(busqueda);
-
-function buscarArticulo(textoBusqueda) {
-// Realizar la búsqueda y mostrar los resultados
-
-}
+ 
