@@ -29,14 +29,16 @@ function buscarArticulo() {
     if (articuloRecorrido === true) {
       articuloEncontrado = articulos[i];
       console.log(articuloEncontrado);
-      articuloEncontrado.style.display = "block";
+      articuloEncontrado.style.display = "flex";
     } else {
       articulos[i].style.display = "none";
+
     }
   } 
   if (!articuloEncontrado){
-    console.log('No se encontro coincidencia');
-    resultadosDeBusqueda.innerHTML = "No se encontraron resultados";
+    let mensaje = document.getElementById("sincoincidencias");
+    mensaje.className = 'fs-2 text-center my-5';
+    console.log(mensaje)
   } else {
     resultadosDeBusqueda.innerHTML = "";
   }
@@ -45,6 +47,3 @@ function buscarArticulo() {
   }
  
 }
-// function ocultarElementos(){
-//   document.getElementById('articulo')
-// }
