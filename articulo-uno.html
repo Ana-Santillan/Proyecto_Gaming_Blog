@@ -1,470 +1,390 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Proyecto gaming blog" />
-    <meta name="keywords" content="js, javascript, juegos, blog" />
-    <meta
-      name="author"
-      content="Ana Luz Santillan, Rodriguez Yanina, Soria Mauricio, Herrera Nicolas"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Gaming Blog</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="./img/Logo.png"
-              alt="Logo-Kokemones"
-              width="50"
-              height="55"
-            />
-          </a>
-          <button
-            class="navbar-toggler colorBoton"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item px-4">
-                <a
-                  class="nav-link link-secondary"
-                  aria-current="page"
-                  href="./index.html"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item px-4">
-                <a class="nav-link link-secondary" href="./quienesSomos.html"
-                  >¿Quiénes somos?</a
-                >
-              </li>
-            </ul>
-            <!-- boton de busqueda -->
-            <form class="d-flex" role="search" id="formularioBusqueda">
-              <input
-                class="form-control me-2"
-                id="campoDeBusqueda"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Search"
-                minlength="3"
-                maxlength="70"
-                required
-              />
-              <button class="btn btn-outline-light colorBoton" type="submit">
-                Buscar
-              </button>
-            </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyecto gaming blog" />
+  <meta name="keywords" content="js, javascript, juegos, blog" />
+  <meta name="author" content="Ana Luz Santillan, Rodriguez Yanina, Soria Mauricio, Herrera Nicolas" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Gaming Blog</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/Logo.png" alt="Logo-Kokemones" width="50" height="55" />
+        </a>
+        <button class="navbar-toggler colorBoton" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-4">
+              <a class="nav-link link-secondary" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link link-secondary" href="./quienesSomos.html">¿Quiénes somos?</a>
+            </li>
+          </ul>
+          <!-- boton de busqueda -->
+          <form class="d-flex" role="search" id="formularioBusqueda">
+            <input class="form-control me-2" id="campoDeBusqueda" type="search" placeholder="Buscar" aria-label="Search"
+              minlength="3" maxlength="70" required />
+            <button class="btn btn-outline-light colorBoton" type="submit">
+              Buscar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="row container-fluid">
+    <section class="container py-4 col-lg-7 ms-2">
+      <h1 class="d-flex justify-content-center">
+        STAR WARS Jedi: Survivor™ llego a kokemania
+      </h1>
+      <hr />
+      <div class="p-lg-4">
+        <img class="img-fluid" src="./img/starW-JEDI.jpg" alt="Juego Star Wars" />
+      </div>
+      <div class="mt-3">
+        <button class="mx-1 colorBoton">Accion</button>
+        <button class="mx-1 colorBoton">Aventura</button>
+        <button class="mx-1 colorBoton">Tipo "Dark Souls"</button>
+        <button class="mx-1 colorBoton">Un jugador</button>
+        <button class="mx-1 colorBoton">Personalizacion de personaje</button>
+      </div>
+
+      <hr />
+      <p>
+        La espera ha terminado para todos los usuarios de la "Fuerza": Star
+        Wars Jedi: Survivor ya está disponible para PC, Xbox y Playstation. Y
+        con motivo de su lanzamiento, los fans de la saga pueden encontrar en
+        G2A un descuento del 28 % en la versión del juego en PC en esta web,
+        así como en otros juegos relacionados. Estas ofertas de juegos de
+        ciencia ficción y aventuras interestelares tendrán lugar desde el 28
+        de abril hasta el 27 de mayo.
+      </p>
+      <p>
+        Y para celebrar el lanzamiento, G2A se complace en anunciar
+        emocionantes actividades con su comunidad de creadores de contenido,
+        permitiendo a los fans el poder ganar videojuegos, códigos de
+        descuento y hasta un fantástico viaje a Sevilla. 4 de Mayo - Directo
+        con Spirit "Charla sobre la saga de Star Wars + regalos". Donde los
+        espectadores que interactúen con el directo, podrán optar a ganar un
+        videojuego totalmente gratis. Gana un viaje a Sevilla para dos
+        personas de la mano de G2A. Sevilla tiene un color especial, sobre
+        todo para aquellos fans de la saga, dado que se encuentra un lugar
+        emblemático de Star Wars, Plaza España, lugar donde se grabaron
+        algunas escenas exteriores del planeta reinado por Padmé Amidala,
+        Naboo. Para optar a ganar el viaje los seguidores de G2A lo único que
+        tendrán que hacer es participar en un concurso de "consejos de vida
+        estilo Yoda", donde el mejor será el que se pueda coronar con el
+        premio. Desde G2A siempre les gusta cuidar de los amantes de los
+        videojuegos, dándoles la facilidad de disfrutar de los títulos que
+        tanto les gustan. En su web podrás encontrar una amplia selección de
+        videojuegos para todas las plataformas, desde Xbox y PlayStation,
+        hasta PC. Además, en G2A se preocupan por ofrecer los mejores precios
+        del mercado. Gracias a su red de vendedores y compradores, pueden
+        ofrecer precios muy competitivos en todos sus productos. Si tienes
+        alguna duda o problema, su equipo de atención al cliente que estará
+        encantado de ayudarte.
+      </p>
+      <article>
+        <div class="d-flex">
+          <h5>EVENTOS Y ANUNCIOS RECIENTES</h5>
+          <hr>
+          <button class="ms-4 btn btn-dark">Ver todos</button>
+          <hr />
+        </div>
+        <div class="row pt-3">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="./img/starW-JEDI.jpg" alt="" />
           </div>
-        </div>
-      </nav>
-    </header>
-    <main class="row container-fluid">
-      <section class="container py-4 col-lg-7 ms-2">
-        <h1 class="d-flex justify-content-center">
-          STAR WARS Jedi: Survivor™ llego a kokemania
-        </h1>
-        <hr />
-        <div class="p-lg-4">
-          <img
-            class="img-fluid"
-            src="./img/starW-JEDI.jpg"
-            alt="Juego Star Wars"
-          />
-        </div>
-        <div class="mt-3">
-          <button class="mx-1 colorBoton">Accion</button>
-          <button class="mx-1 colorBoton">Aventura</button>
-          <button class="mx-1 colorBoton">Tipo "Dark Souls"</button>
-          <button class="mx-1 colorBoton">Un jugador</button>
-          <button class="mx-1 colorBoton">Personalizacion de personaje</button>
+          <div class="col-lg-6">
+            <img class="img-fluid" src="./img/starW-JEDI.jpg" alt="" />
+          </div>
         </div>
 
-        <hr />
-        <p>
-          La espera ha terminado para todos los usuarios de la "Fuerza": Star
-          Wars Jedi: Survivor ya está disponible para PC, Xbox y Playstation. Y
-          con motivo de su lanzamiento, los fans de la saga pueden encontrar en
-          G2A un descuento del 28 % en la versión del juego en PC en esta web,
-          así como en otros juegos relacionados. Estas ofertas de juegos de
-          ciencia ficción y aventuras interestelares tendrán lugar desde el 28
-          de abril hasta el 27 de mayo.
-        </p>
-        <p>
-          Y para celebrar el lanzamiento, G2A se complace en anunciar
-          emocionantes actividades con su comunidad de creadores de contenido,
-          permitiendo a los fans el poder ganar videojuegos, códigos de
-          descuento y hasta un fantástico viaje a Sevilla. 4 de Mayo - Directo
-          con Spirit "Charla sobre la saga de Star Wars + regalos". Donde los
-          espectadores que interactúen con el directo, podrán optar a ganar un
-          videojuego totalmente gratis. Gana un viaje a Sevilla para dos
-          personas de la mano de G2A. Sevilla tiene un color especial, sobre
-          todo para aquellos fans de la saga, dado que se encuentra un lugar
-          emblemático de Star Wars, Plaza España, lugar donde se grabaron
-          algunas escenas exteriores del planeta reinado por Padmé Amidala,
-          Naboo. Para optar a ganar el viaje los seguidores de G2A lo único que
-          tendrán que hacer es participar en un concurso de "consejos de vida
-          estilo Yoda", donde el mejor será el que se pueda coronar con el
-          premio. Desde G2A siempre les gusta cuidar de los amantes de los
-          videojuegos, dándoles la facilidad de disfrutar de los títulos que
-          tanto les gustan. En su web podrás encontrar una amplia selección de
-          videojuegos para todas las plataformas, desde Xbox y PlayStation,
-          hasta PC. Además, en G2A se preocupan por ofrecer los mejores precios
-          del mercado. Gracias a su red de vendedores y compradores, pueden
-          ofrecer precios muy competitivos en todos sus productos. Si tienes
-          alguna duda o problema, su equipo de atención al cliente que estará
-          encantado de ayudarte.
-        </p>
-        <article>
-          <div class="d-flex">
-            <h5>EVENTOS Y ANUNCIOS RECIENTES</h5><hr>
-            <button class="ms-4 btn btn-dark">Ver todos</button>
-            <hr />
-          </div>
-            <div class="row pt-3">
-              <div class="col-lg-6">
-                <img class="img-fluid" src="./img/starW-JEDI.jpg" alt="" />
-              </div>
-              <div class="col-lg-6">
-                <img class="img-fluid" src="./img/starW-JEDI.jpg" alt="" />
-              </div>
-            </div>
-           
-        </article>
-      </section>
-      <section class="areaPublicitaria col-lg-4" id="publicidad">
-        <article class="px-2">
-          <div class="container text-center">
-            <div class="row row-cols-4 pintarBordeContenedor mt-4">
-              <div class="col pintarBordeContenedor">Idiomas</div>
-              <div class="col pintarBordeContenedor">Interfaz</div>
-              <div class="col pintarBordeContenedor">Voces</div>
-              <div class="col pintarBordeContenedor">Subtitulos</div>
-              <div class="col pintarBordeContenedor">Español</div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">Ingles</div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">Frances</div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">Italiano</div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">Aleman</div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-              <div class="col pintarBordeContenedor">
-                <i class="bi bi-check-lg"></i>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="px-2">
-          <div class="container text-center">
-            <div class="row row-cols-4 pintarBordeContenedor mt-4">
-              <div class="col pintarBordeContenedor">Idiomas</div>
-              <div class="col pintarBordeContenedor">Interfaz</div>
-              <div class="col pintarBordeContenedor">Voces</div>
-              <div class="col pintarBordeContenedor">Subtitulos</div>
-              <div class="col pintarBordeContenedor">Español</div>
-              <div class="col pintarBordeContenedor">si</div>
-              <div class="col pintarBordeContenedor">si</div>
-              <div class="col pintarBordeContenedor">si</div>
-            </div>
-          </div>
-        </article>
-        <article class="pt-3 mt-3 marcoDeFondo ms-1 ps-2">
-          <p>
-            TITULO:<a class="text-light text-decoration-none" href="./error404">
-              STAR WARS Jedi: Survivor™</a
-            >
-          </p>
-          <p>
-            GENERO:<a class="text-light text-decoration-none" href="./error404">
-              Acción, Aventura</a
-            >
-          </p>
-          <p>
-            DESARROLLADOR:<a
-              class="text-light text-decoration-none"
-              href="./error404"
-            >
-              Respawn</a
-            >
-          </p>
-          <p>
-            EDITOR:<a class="text-light text-decoration-none" href="./error404">
-              Electronic Arts</a
-            >
-          </p>
-          <p>
-            FRANQUICIA:<a
-              class="text-light text-decoration-none"
-              href="./error404"
-            >
-              Star Wars</a
-            >
-          </p>
-          <p>
-            FECHA DE LANZAMIENTO:<a
-              class="text-light text-decoration-none"
-              href="./error404"
-            >
-              28 ABR 2023</a
-            >
-          </p>
-        </article>
-        <div>
-          <div class="marcoDeFondo row pt-3 d-flex text-light ms-1">
-            <div class="col-4">
-              <img src="./img/teen.png" alt="Teen ESRB" />
-            </div>
-            <div class="col-8">
-              <h6>VIOLENCE MILD LANGUAJE</h6>
-            </div>
-            <p class="pt-1">Calificacion para ESRB</p>
-          </div>
-        </div>
-        <ul class="marcoDeFondo mt-3">
-          <li class="">
-            <a
-              class="text-decoration-none text-light nav-link"
-              href="./error404"
-              >Visitar el sitio web</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none text-light" href="error404"
-              >Ver historial de actualizaciones</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none text-light" href="./error404"
-              >Leer noticias relacionadas</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none text-light" href=""
-              >Ver discusiones</a
-            >
-          </li>
-          <li>
-            <a class="text-decoration-none text-light" href=""
-              >Buscar grupos de la comunidad</a
-            >
-          </li>
-        </ul>
-        <div>
-          <button class="btnApagado">COMPARTIR</button>
-          <button class="btnApagado">INSERTAR</button>
-          <button class="btnApagado">DENUNCIAR PRODUCTO</button>
-        </div>
-      </section>
-      <hr>
-      <section id="comentarios" class="bg-transparent list-group-item">
-        <div id="Cajacomentario" class="container">
-            <h3 class="display-3 mb-3">Comentarios</h3>
-            <div class="container my-1 d-flex flex-column justify-content-center align-items-center d-lg-flex flex-lg-row">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn rounded-circle" data-bs-toggle="modal"
-                    data-bs-target="#modalVentana">
-                    <img id="imagenRepresentativa" height="85px" width="85px"
-                        src="./img/db64938b-1f65-4905-8cca-0a416021a10c.jpg" class=" rounded-circle mt-2 mx-1"
-                        alt="Avatar por Default"> </button>
-                <!-- Modal -->
-                <div class="modal fade" id="modalVentana" tabindex="-1" aria-labelledby="modalVentanaLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="modalVentanaLabel">Seleccione un Avatar</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div id="avataresImg" class="modal-body text-center">
-                                <button id="botonGoku" type="button" class="btn rounded-circle"><img id="avatarGoku"
-                                        src="./img/Son Goku_2 - copia.png" alt="Avatar de Goku" class=" rounded-circle mt-2 mx-1"
-                                        height="65px" width="70px"></button>
-                                <button id="botonFortnite" type="button" class="btn rounded-circle"><img
-                                        id="avatarFortnite" src="./img/descarga.jpg" alt="Avatar de Fortnite"
-                                        class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
-                                        width="70px"></button>
-                                <button id="botonKratos" type="button" class="btn rounded-circle"><img
-                                        id="avatarKratos" src="./img/descarga (1).jpg" alt="Avatar de Kratos"
-                                        class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
-                                        width="70px"></button>
-                                <button id="botonGaspi" type="button" class="btn rounded-circle"><img
-                                        id="avatarGaspi" src="./img/descarga (2).jpg" alt="Avatar de Gaspi"
-                                        class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px"
-                                        width="70px"></button>
-                                <button id="botonDarthVader" type="button" class="btn rounded-circle"><img
-                                        id="avatarDarthVader" src="./img/1072434_110615-cc-Darth-Vader-Thumb.jpg"
-                                        alt="Avatar de Darth Vader" class="border rounded-circle mt-2 mx-1 object-fit-cover"
-                                        height="65px" width="70px"></button>
-                                <button id="botonPapaS" type="button" class="btn rounded-circle"><img
-                                        id="avatarPapaS" src="./img/FsxosMIWcAMJBtY.jpg" alt="Avatar de Papa Swolio"
-                                        class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px"
-                                        width="70px"></button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                    onclick="limpiarSeleccion()">Cancelar</button>
-                                <button id="seleccionAvatar" type="submit" class="btn btn-primary"
-                                    data-bs-dismiss="modal">Seleccionar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <input id="inputTextoNombre" type="text" class="form-control mb-1 inputTexto"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="Escribe un nombre..." style="width: 180px;">
-                    <input id="inputTextoComentario" type="text" class="form-control inputTexto"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                        placeholder="Escribe un comentario...">
-                </div>
-            </div>
-            <div class="d-flex justify-content-center my-2 d-lg-flex justify-content-lg-end  me-lg-3">
-                <button id="botonCancelar" class="d-none">Cancelar</button>
-                <button id="botonEnviar" class="btn btn-secondary">Enviar</button>
-            </div>
-        </div>
-        <article class="container text-center">
-            <p>
-                <button id="botonVermas" class="btn btn-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseWidthExample" aria-expanded="false"
-                    aria-controls="collapseWidthExample">
-                    Ver Comentarios
-                </button>
-            </p>
-        </article>
-        <div style="min-height: 120px;">
-            <div class="collapse" id="collapseWidthExample">
-                <div id="comentariosPublicados">
-                    <div id="comentarioPublicado" class="container d-flex">
-                        <img id="imagenRepresentativa" height="65px" width="70px" src="./img/Son Goku_2 - copia.png"
-                            class="border rounded-circle mt-2 mx-3" alt="Avatar de Goku">
-                        <div id="contenidoComentario">
-                            <p id="nombrePersona"><strong>Jimmy98</strong></p>
-                            <p id="comentarioContenido">Hola! soy Goku si estas leyendo esto ponte a programar y
-                                deja de
-                                joder, naciste en LATAM y no tienes opcion. Adios!!</p>
-                        </div>
-                    </div>
-                    <div id="comentarioPublicado" class="container d-flex">
-                        <img id="imagenRepresentativa" height="65px" width="70px" src="./img/FsxosMIWcAMJBtY.jpg"
-                            class="border rounded-circle mt-2 mx-3" alt="Avatar de Papa Swolio">
-                        <div id="contenidoComentario">
-                            <p id="nombrePersona"><strong>--PapaSwolio--</strong></p>
-                            <p id="comentarioContenido">Ve al puto Gimnasio, no me importa.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </article>
     </section>
-    </main>
-    <footer class="bg-dark text-secondary py-4">
-      <section class="container">
-        <div class="row">
-          <aside class="col-md-4 text-center text-md-start">
-            <img src="./img/Logo.png" alt="Logo-Kokemones" width="90px" />
-          </aside>
-          <aside class="col-md-4 text-center text-md-start">
-            <h5>Navegación</h5>
-            <ul class="list-unstyled">
-              <li><a href="#" class="link-secondary">¿Quiénes somos?</a></li>
-              <li>
-                <a href="./pages/error404.html" class="link-secondary"
-                  >Seguridad</a
-                >
-              </li>
-              <li>
-                <a href="./pages/error404.html" class="link-secondary">Ayuda</a>
-              </li>
-            </ul>
-          </aside>
-          <aside class="col-md-4">
-            <h5>Seguinos en nuestras redes</h5>
-            <div class="text-center text-md-start">
-              <a href="./pages/error404.html" class="text-secondary"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="./pages/error404.html" class="text-secondary mx-2"
-                ><i class="bi bi-whatsapp"></i
-              ></a>
-              <a href="./pages/error404.html" class="text-secondary"
-                ><i class="bi bi-instagram"></i
-              ></a>
+    <section class="areaPublicitaria col-lg-4" id="publicidad">
+      <article class="px-2">
+        <div class="container text-center">
+          <div class="row row-cols-4 pintarBordeContenedor mt-4">
+            <div class="col pintarBordeContenedor">Idiomas</div>
+            <div class="col pintarBordeContenedor">Interfaz</div>
+            <div class="col pintarBordeContenedor">Voces</div>
+            <div class="col pintarBordeContenedor">Subtitulos</div>
+            <div class="col pintarBordeContenedor">Español</div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
             </div>
-          </aside>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">Ingles</div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">Frances</div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">Italiano</div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">Aleman</div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="col pintarBordeContenedor">
+              <i class="bi bi-check-lg"></i>
+            </div>
+          </div>
         </div>
-      </section>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/busquedas.js"></script>
-    <script src="./js/comentariosControlador.js"></script>
-  </body>
+      </article>
+      <article class="px-2">
+        <div class="container text-center">
+          <div class="row row-cols-4 pintarBordeContenedor mt-4">
+            <div class="col pintarBordeContenedor">Idiomas</div>
+            <div class="col pintarBordeContenedor">Interfaz</div>
+            <div class="col pintarBordeContenedor">Voces</div>
+            <div class="col pintarBordeContenedor">Subtitulos</div>
+            <div class="col pintarBordeContenedor">Español</div>
+            <div class="col pintarBordeContenedor">si</div>
+            <div class="col pintarBordeContenedor">si</div>
+            <div class="col pintarBordeContenedor">si</div>
+          </div>
+        </div>
+      </article>
+      <article class="pt-3 mt-3 marcoDeFondo ms-1 ps-2">
+        <p>
+          TITULO:<a class="text-light text-decoration-none" href="./error404">
+            STAR WARS Jedi: Survivor™</a>
+        </p>
+        <p>
+          GENERO:<a class="text-light text-decoration-none" href="./error404">
+            Acción, Aventura</a>
+        </p>
+        <p>
+          DESARROLLADOR:<a class="text-light text-decoration-none" href="./error404">
+            Respawn</a>
+        </p>
+        <p>
+          EDITOR:<a class="text-light text-decoration-none" href="./error404">
+            Electronic Arts</a>
+        </p>
+        <p>
+          FRANQUICIA:<a class="text-light text-decoration-none" href="./error404">
+            Star Wars</a>
+        </p>
+        <p>
+          FECHA DE LANZAMIENTO:<a class="text-light text-decoration-none" href="./error404">
+            28 ABR 2023</a>
+        </p>
+      </article>
+      <div>
+        <div class="marcoDeFondo row pt-3 d-flex text-light ms-1">
+          <div class="col-4">
+            <img src="./img/teen.png" alt="Teen ESRB" />
+          </div>
+          <div class="col-8">
+            <h6>VIOLENCE MILD LANGUAJE</h6>
+          </div>
+          <p class="pt-1">Calificacion para ESRB</p>
+        </div>
+      </div>
+      <ul class="marcoDeFondo mt-3">
+        <li class="">
+          <a class="text-decoration-none text-light nav-link" href="./error404">Visitar el sitio web</a>
+        </li>
+        <li>
+          <a class="text-decoration-none text-light" href="error404">Ver historial de actualizaciones</a>
+        </li>
+        <li>
+          <a class="text-decoration-none text-light" href="./error404">Leer noticias relacionadas</a>
+        </li>
+        <li>
+          <a class="text-decoration-none text-light" href="">Ver discusiones</a>
+        </li>
+        <li>
+          <a class="text-decoration-none text-light" href="">Buscar grupos de la comunidad</a>
+        </li>
+      </ul>
+      <div>
+        <button class="btnApagado">COMPARTIR</button>
+        <button class="btnApagado">INSERTAR</button>
+        <button class="btnApagado">DENUNCIAR PRODUCTO</button>
+      </div>
+    </section>
+    <hr>
+    <section id="comentarios" class="bg-transparent list-group-item">
+      <div id="Cajacomentario" class="container">
+        <h3 class="display-3 mb-3">Comentarios</h3>
+        <div class="container my-1 d-flex flex-column justify-content-center align-items-center d-lg-flex flex-lg-row">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn rounded-circle" data-bs-toggle="modal" data-bs-target="#modalVentana">
+            <img id="imagenRepresentativa" height="85px" width="85px"
+              src="./img/db64938b-1f65-4905-8cca-0a416021a10c.jpg" class=" rounded-circle mt-2 mx-1"
+              alt="Avatar por Default"> </button>
+          <!-- Modal -->
+          <div class="modal fade" id="modalVentana" tabindex="-1" aria-labelledby="modalVentanaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="modalVentanaLabel">Seleccione un Avatar</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="avataresImg" class="modal-body text-center">
+                  <button id="botonGoku" type="button" class="btn rounded-circle"><img id="avatarGoku"
+                      src="./img/Son Goku_2 - copia.png" alt="Avatar de Goku" class=" rounded-circle mt-2 mx-1"
+                      height="65px" width="70px"></button>
+                  <button id="botonFortnite" type="button" class="btn rounded-circle"><img id="avatarFortnite"
+                      src="./img/descarga.jpg" alt="Avatar de Fortnite"
+                      class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px" width="70px"></button>
+                  <button id="botonKratos" type="button" class="btn rounded-circle"><img id="avatarKratos"
+                      src="./img/descarga (1).jpg" alt="Avatar de Kratos"
+                      class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px" width="70px"></button>
+                  <button id="botonGaspi" type="button" class="btn rounded-circle"><img id="avatarGaspi"
+                      src="./img/descarga (2).jpg" alt="Avatar de Gaspi"
+                      class="border rounded-circle mt-2 mx-1  object-fit-cover" height="65px" width="70px"></button>
+                  <button id="botonDarthVader" type="button" class="btn rounded-circle"><img id="avatarDarthVader"
+                      src="./img/1072434_110615-cc-Darth-Vader-Thumb.jpg" alt="Avatar de Darth Vader"
+                      class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px" width="70px"></button>
+                  <button id="botonPapaS" type="button" class="btn rounded-circle"><img id="avatarPapaS"
+                      src="./img/FsxosMIWcAMJBtY.jpg" alt="Avatar de Papa Swolio"
+                      class="border rounded-circle mt-2 mx-1 object-fit-cover" height="65px" width="70px"></button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    onclick="limpiarSeleccion()">Cancelar</button>
+                  <button id="seleccionAvatar" type="submit" class="btn btn-primary"
+                    data-bs-dismiss="modal">Seleccionar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <input id="inputTextoNombre" type="text" class="form-control mb-1 inputTexto"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+              placeholder="Escribe un nombre..." style="width: 180px;">
+            <input id="inputTextoComentario" type="text" class="form-control inputTexto"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+              placeholder="Escribe un comentario...">
+          </div>
+        </div>
+        <div class="d-flex justify-content-center my-2 d-lg-flex justify-content-lg-end  me-lg-3">
+          <button id="botonCancelar" class="d-none">Cancelar</button>
+          <button id="botonEnviar" class="btn btn-secondary">Enviar</button>
+        </div>
+      </div>
+      <article class="container text-center">
+        <p>
+          <button id="botonVermas" class="btn btn-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Ver Comentarios
+          </button>
+        </p>
+      </article>
+      <div style="min-height: 120px;">
+        <div class="collapse" id="collapseWidthExample">
+          <div id="comentariosPublicados">
+            <div id="comentarioPublicado" class="container d-flex">
+              <img id="imagenRepresentativa" height="65px" width="70px" src="./img/Son Goku_2 - copia.png"
+                class="border rounded-circle mt-2 mx-3" alt="Avatar de Goku">
+              <div id="contenidoComentario">
+                <p id="nombrePersona"><strong>Jimmy98</strong></p>
+                <p id="comentarioContenido">Hola! soy Goku si estas leyendo esto ponte a programar y
+                  deja de
+                  joder, naciste en LATAM y no tienes opcion. Adios!!</p>
+              </div>
+            </div>
+            <div id="comentarioPublicado" class="container d-flex">
+              <img id="imagenRepresentativa" height="65px" width="70px" src="./img/FsxosMIWcAMJBtY.jpg"
+                class="border rounded-circle mt-2 mx-3" alt="Avatar de Papa Swolio">
+              <div id="contenidoComentario">
+                <p id="nombrePersona"><strong>--PapaSwolio--</strong></p>
+                <p id="comentarioContenido">Ve al puto Gimnasio, no me importa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-dark text-secondary py-4">
+    <section class="container">
+      <div class="row">
+        <aside class="col-md-4 text-center text-md-start">
+          <img src="./img/Logo.png" alt="Logo-Kokemones" width="90px" />
+        </aside>
+        <aside class="col-md-4 text-center text-md-start">
+          <h5>Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="link-secondary">¿Quiénes somos?</a></li>
+            <li>
+              <a href="./pages/error404.html" class="link-secondary">Seguridad</a>
+            </li>
+            <li>
+              <a href="./pages/error404.html" class="link-secondary">Ayuda</a>
+            </li>
+          </ul>
+        </aside>
+        <aside class="col-md-4">
+          <h5>Seguinos en nuestras redes</h5>
+          <div class="text-center text-md-start">
+            <a href="./pages/error404.html" class="text-secondary"><i class="bi bi-facebook"></i></a>
+            <a href="./pages/error404.html" class="text-secondary mx-2"><i class="bi bi-whatsapp"></i></a>
+            <a href="./pages/error404.html" class="text-secondary"><i class="bi bi-instagram"></i></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/busquedas.js"></script>
+  <script src="./js/comentariosControlador.js"></script>
+  <script src="./js/publicidad.js"></script>
+</body>
+
 </html>
