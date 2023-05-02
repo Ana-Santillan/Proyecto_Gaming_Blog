@@ -7,6 +7,7 @@ let formularioBusqueda = document.getElementById("formularioBusqueda");
 formularioBusqueda.addEventListener("submit", (e) => {
   e.preventDefault();
   buscarArticulo();
+  formularioBusqueda.reset();
 });
 // detengo que la pag se recargue  e. prevent d
 
@@ -15,6 +16,7 @@ function buscarArticulo() {
   let textoBuscado = campoDeBusqueda.value.trim();
   textoBuscado = textoBuscado.toLowerCase();
   let articulos = document.getElementsByClassName("articulo");
+
 
   //  etiqueta p articulo
   console.log("Buscando Articulo");
@@ -25,7 +27,7 @@ function buscarArticulo() {
   //hacer desaparecer el resto de los articulos  cuando enuentre una coincidencia se eliminan los demas articulos y 
 
   for (let i = 0; i < articulos.length; i++) {
-    let articuloRecorrido = articulos[i].innerHTML.includes(textoBuscado);
+    let articuloRecorrido = articulos[i].innerHTML.toLowerCase().includes(textoBuscado);
     if (articuloRecorrido === true) {
       articuloEncontrado = articulos[i];
       console.log(articuloEncontrado);
@@ -39,8 +41,6 @@ function buscarArticulo() {
     let mensaje = document.getElementById("sincoincidencias");
     mensaje.className = 'fs-2 text-center my-5';
     console.log(mensaje)
-  } else {
-    resultadosDeBusqueda.innerHTML = "";
   }
   if (!articuloEncontrado){
     console.log('No se encontro coincidencia');
