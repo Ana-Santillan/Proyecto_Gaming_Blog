@@ -137,3 +137,6 @@ button{
     border: none;
     outline:none;
 } */
+.colorError{
+    background: #1f0828;
+}
