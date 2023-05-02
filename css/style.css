@@ -127,6 +127,10 @@ main{
         }
     }
 
+    .marcoDeFondo{
+        border: 1px solid rgba(0, 0, 0, 0.767);
+        background-color: rgba(0, 0, 0, 0.535);
+    }
 /* OCULTAR LOS DEMAS ELEMENTOS EN BUSQUEDA */
 /*     
 button{
